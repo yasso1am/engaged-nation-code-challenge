@@ -30,10 +30,9 @@ class Home extends Component {
                     I am in no way dogmatic in my approach to code, and am looking forward to working with a professional team.
                     <br />
                     <br />
-                    As mentioned to your HR manager on the phone, I am not trying to hide the fact that I am a new developer. I still have learning to do. 
-                    For instance, I know this site would need significant work to improve it's responsiveness for smaller screens and native devices. 
-                    With my current abilities and the assignment's time constraint, this was difficult to pull off. However you'll never find me frustrated with being told to improve something, and I will strive to meet the new standards.
-                    However I am very motivated, eager to learn, and don't bring bad habits along with me.
+                    I am not trying to hide the fact that I am a new developer. I know that I have alot to learn and to improve. 
+                    However you'll never find me frustrated with being told to improve something, and I will strive to meet the standards you set.
+                    I am motived, excited to learn, and don't bring bad habits along with me.
                   </MyText>
                   <Grid.Row>
                   <ButtonGroup>

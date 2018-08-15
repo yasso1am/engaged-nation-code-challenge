@@ -18,6 +18,7 @@ import Eighth from './images/eighth.jpg'
 import Ninth from './images/ninth.jpg'
 import Tenth from './images/tenth.png'
 import Eleventh from './images/eleventh.png'
+import Twelfth from './images/twelfth.png'
 
 class AnswerSegment extends React.Component{
   render() {
@@ -27,7 +28,7 @@ class AnswerSegment extends React.Component{
     if ( this.props.answers === "Design" )
       return(
         <MyContainer>
-          <Header textAlign="center" dividing> Design </Header>
+          <Header as="h2" textAlign="center" dividing> Design </Header>
             <Question> 1. What is wrong with this website?  <a href="http://www.007museum.com/" rel="noopener noreferrer" target="_blank">  http://www.007museum.com </a> </Question>
               <MyText>
                 The first thing I notice is that my ears were attacked by multiple audio files automatically playing and overlapping one another upon loading the page. This is incredibly poor user experience, and made me want to click off the website immediately. I would remove this feature entirely, or at the very least make it clear to the user where to stop the audio. After scrolling for a while to find where the audio source was playing from so I could stop it (and not finding it), I realized I had to stop all scripts from running on the page or simply mute my speakers to get it to stop. After addressing the audio, my eyes were drawn to the table layout. Although this was a design principle that worked for a long time, we have much better tools these days to create simple and clear layouts. The table method is utilized here fairly poorly as well, and I would use CSS Grid or Flexbox to greatly improve organization. 
@@ -88,7 +89,7 @@ class AnswerSegment extends React.Component{
     if ( this.props.answers === "JavaScript" )
       return(
         <MyContainer>
-          <Header textAlign="center" dividing> JavaScript </Header>
+          <Header as="h2" textAlign="center" dividing> JavaScript </Header>
             <Question> 1. What’s the difference between the following 3 “car” approaches? </Question>
               <MyText>
                 With the first approach, we are simply creating a function. Nothing will be returned unless we provide some code in the function, and then actually call the function. Below I have declared the function Car to take in an argument of (make). Inside of the function, I will log the make.color. By then logging the function Car with the (honda) object passed into it, we get a return from the function of “blue”.
@@ -180,7 +181,7 @@ class AnswerSegment extends React.Component{
     if ( this.props.answers === "CSS" )
       return(
         <MyContainer>
-          <Header textAlign="center" dividing> CSS </Header>
+          <Header as="h2" textAlign="center" dividing> CSS </Header>
             <Question> 1. Which Snippet of CSS is properly used to center a website horizontally? </Question>
               <MyText>
                 d) margin: 0 auto;
@@ -201,7 +202,7 @@ class AnswerSegment extends React.Component{
               <MyText>
                 d) list-style-type: none;
               </MyText>
-          <Header textAlign="center" dividing> CSS Challenge Questions </Header>
+          <Header as="h2" textAlign="center" dividing> CSS Challenge Questions </Header>
             <Question> 
               Looking at the code snippet below, how would you change the font color to white for the first p element? 
             <Image
@@ -223,9 +224,56 @@ class AnswerSegment extends React.Component{
     if ( this.props.answers === "jQuery" )
       return(
         <MyContainer>
-          <Header textAlign="center" dividing> jQuery </Header>
+          <Header as="h2" textAlign="center" dividing> jQuery </Header>
+            <Question> 1. What is the correct jQuery code to set the background color of all p elements to red? </Question>
+              <MyText>
+                d) $('p' ).css('background-color', 'red')
+              </MyText>
+            <Question> 2. With jQuery, look at the following selector: $("div.intro"). What does it select? </Question>
+              <MyText>
+                c) All div elements with the class="intro"
+              </MyText>
+            <Question> 3. Which of the following jQuery methods return true if the specified class is present on at least one of the set of matched elements? </Question>
+              <MyText>
+                c) hasClass(class)
+                <br />
+                <br />
+                <MyText> This will return true as long as it is written as such: </MyText>
+                <MyText>
+                  $("#mydiv").hasClass("className")
+                </MyText>
+              </MyText>
+            <Question> 4. Which method acts as an explicit iterator? </Question>
+              <MyText>
+                d) .each()
+              </MyText>
+            <Question> 5. For the purpose of selecting a specific class, classes must contain which prefix? </Question>
+              <MyText>
+                b) .
+              </MyText>
+          <Header as="h2" textAlign="center" dividing> jQuery Challenge Questions </Header>
+            <Question> 
+            1. Looking at the code snippet below remove the class "two" and add the class "four". 
+              <MyText>
+                {"<div id='myText' class='one two three'>This is a test</div>"}
+              </MyText>
+            </Question>
+              <MyText>
+                $('#myTest').removeClass("two").addClass("four")
+              </MyText>
+            <Question> Looking at the code below, add click events to the div elements that will do what the text says. </Question>
+              <Image
+                src={Twelfth}
+                size="huge"
+                centered
+                />
+
+
         </MyContainer>    
         )
+
+    // SIMPLE ERROR HANDLING
+
     else {
       return(
         <Container>
