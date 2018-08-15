@@ -30,7 +30,7 @@ class Home extends Component {
                     I am in no way dogmatic in my approach to code, and am looking forward to working with a professional team.
                     <br />
                     <br />
-                    I am not trying to hide the fact that I am a new developer. I know that I have alot to learn and to improve. 
+                    I am not trying to hide the fact that I am a new developer. I know that I have a lot to learn and to improve. 
                     However you'll never find me frustrated with being told to improve something, and I will strive to meet the standards you set.
                     I am motived, excited to learn, and don't bring bad habits along with me.
                   </MyText>

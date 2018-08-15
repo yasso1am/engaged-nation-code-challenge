@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-
+  Button,
 } from 'semantic-ui-react';
 import styled from 'styled-components'
 
@@ -13,6 +13,11 @@ const Footer = () => {
           <br/>
           Copyright © 2018 Andrew Yasso, LLC - All Rights Reserved
         </MyText>
+          <Social>
+            <Button circular color='facebook' icon='facebook' href="https://www.facebook.com/andrew.yasso" target="_blank"/>
+            <Button circular icon='github' href="https://github.com/yasso1am" target="_blank" />
+            <Button circular color='linkedin' icon='linkedin' href="https://www.linkedin.com/in/andrew-yasso/" target="_blank" />
+          </Social>
       </MyMenu>
     </div>
   )
@@ -30,6 +35,9 @@ const MyMenu = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+`
+
+const Social = styled.div`
 `
 
 export default Footer

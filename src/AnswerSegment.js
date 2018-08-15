@@ -296,6 +296,7 @@ padding-top: 10px;
 
 const MyText = styled.p`
   text-indent: 30px;
+  line-height: 1.5em;
 `
 
 export default AnswerSegment

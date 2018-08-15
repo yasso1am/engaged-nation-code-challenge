@@ -28,11 +28,17 @@ class NavBar extends React.Component {
             <MyItem link href="https://www.engagednation.com/" target="_blank">
               <MyFirstText> ENGAGED NATION WEBSITE </MyFirstText>
             </MyItem>
+            <MyItem as={Link} to="/">
+              <MyText> HOME </MyText>
+            </MyItem>
             <MyItem as={Link} to="/answers">
               <MyText> ANSWERS </MyText>
             </MyItem> 
             <MyItem as={Link} to="/resume">
               <MyText> RESUME </MyText>
+            </MyItem>
+            <MyItem as={Link} to="/contact">
+              <MyText> CONTACT </MyText>
             </MyItem>
           </Menu.Menu>
         </MyMenu>
