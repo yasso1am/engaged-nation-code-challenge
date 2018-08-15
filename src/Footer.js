@@ -1,0 +1,35 @@
+import React from 'react'
+import {
+
+} from 'semantic-ui-react';
+import styled from 'styled-components'
+
+const Footer = () => {
+  return(
+    <div>
+      <MyMenu>
+        <MyText> 
+          Address: 2580 Chantemar Street. Las Vegas, NV 89135 - Phone: (248) 342-9359 - Email: andrew.yasso@gmail.com
+          <br/>
+          Copyright © 2018 Andrew Yasso, LLC - All Rights Reserved
+        </MyText>
+      </MyMenu>
+    </div>
+  )
+}
+
+const MyText = styled.div`
+  font-size: 1.2em;
+`
+const MyMenu = styled.div`
+  height: 80px;
+  color: grey;
+  font-weight: 200;
+  line-height: 2em;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+
+export default Footer
