@@ -31,13 +31,13 @@ class AnswerSegment extends React.Component{
           <Header as="h2" textAlign="center" dividing> Design </Header>
             <Question> 1. What is wrong with this website?  <a href="http://www.007museum.com/" rel="noopener noreferrer" target="_blank">  http://www.007museum.com </a> </Question>
               <MyText>
-                The first thing I notice is that my ears were attacked by multiple audio files automatically playing and overlapping one another upon loading the page. This is incredibly poor user experience, and made me want to click off the website immediately. I would remove this feature entirely, or at the very least make it clear to the user where to stop the audio. After scrolling for a while to find where the audio source was playing from so I could stop it (and not finding it), I realized I had to stop all scripts from running on the page or simply mute my speakers to get it to stop. After addressing the audio, my eyes were drawn to the table layout. Although this was a design principle that worked for a long time, we have much better tools these days to create simple and clear layouts. The table method is utilized here fairly poorly as well, and I would use CSS Grid or Flexbox to greatly improve organization. 
+                The first thing I noticed was that my ears were attacked by multiple audio files automatically playing and overlapping one another upon loading the page. This is incredibly poor user experience, and made me want to click off the website immediately. I would remove this feature entirely, or at the very least make it clear to the user where to stop the audio. After scrolling for a while to find where the audio source was playing from so I could stop it (and not finding it), I realized I had to stop all scripts from running on the page or simply mute my speakers to get it to stop. After addressing the audio, my eyes were drawn to the table layout. Although this was a design principle that worked for a long time, we have much better tools these days to create simple and clear layouts. The table method is utilized here fairly poorly as well, and I would use CSS Grid or Flexbox to greatly improve organization. 
               </MyText>
               <MyText>
-                Additionally, when inspecting the code in my Chrome DevTools, it appears they are inline styling, instead of applying classes, IDs, and using standard CSS semantic labeling. For instance, the “Booking ticket. Open mon-fri 10-17, sta. 10-14” is actually a link, however the designer chose to inline style with “text-decoration: none” directly on the tag. This is generally poor form, as it does not indicate to the user that it is a link. Additionally headers are inline styled, instead of given h1 through h6 tags and having their style adjusted based on the CSS. 
+                Additionally, when inspecting the code in my Chrome DevTools, it appears they are inline styling, instead of applying classes, IDs, and using standard CSS semantic labeling. For instance, the “Booking ticket. Open mon-fri 10-17, Sta. 10-14” is actually an anchor link tag, however the designer chose to inline style with “text-decoration: none” directly on the tag. This is generally poor form, as it does not indicate to the user that it is a link. Additionally headers are inline styled, instead of given appropriate h1 through h6 tags and having their style adjusted based on the stylesheet. 
               </MyText>
               <MyText>
-                It also appears they are not localizing their website very well, as when I loaded the page it was a conglomeration of both English and German, although the Chinese flag was pre-highlighted making it seem like that would be the language displayed? With proper localization, you can determine the user’s browser location and show the language in the country they are in, with the option to change it if they choose. ipStack is an API that offers ip based localization for language, time, currency, and more.
+                It also appears they are not localizing their website very well, as when I loaded the page it was a conglomeration of both English and German, although the Chinese flag was pre-highlighted making it seem like that Chinese characters would be the language displayed? With proper localization, you can determine the user’s browser location and show the language in the country they are in, with the option to change it if they choose. ipStack is an API that offers ip based localization for language, time, currency, and more.
               </MyText>
               <MyText>
                 There are many more things wrong with the website, but one of the biggest problems is how unresponsive and mobile unfriendly it is. The website does not respond to adjustments in browser window size whatsoever, and was effectively unusable when I pulled it up on my mobile phone. In today’s times, if websites are not made responsive, and multi-browser friendly, they simply won’t get used. Tools like Webkit make cross-browser compatibility easy, and there are responsive grids available that are designed to adjust based on screen size. Bootstrap and Semantic are two excellent frameworks I have used that have pre-built responsive grids that would vastly improve this page.
@@ -48,10 +48,10 @@ class AnswerSegment extends React.Component{
               </MyText>
                 <Image centered src={First} />
               <MyText>
-                This line of code will apply the 600px.css styling to the document only if the device used has a width of 600px or greater. By using the ‘only’ at the beginning of the media attribute, we hide this stylesheet from older browsers that don’t support media queries.
+                This line of code will apply the 600px.css styling to the document only if the device used has a width of 600px or greater. By using ‘only’ at the beginning of the media attribute, we can hide this stylesheet from older browsers that don’t support media queries.
               </MyText>
               <MyText>
-                Another way to accomplish this would be with JavaScript. Using the jQuery library we can write a function that adjusts a links href according to the width. It would look something like this:
+                Another way to accomplish this would be with JavaScript. Using the jQuery library we can write a function that adjusts what the link references according to the width. It would look something like this:
               </MyText>
                 <Divider hidden />
                   <Image 
@@ -62,7 +62,7 @@ class AnswerSegment extends React.Component{
                 <Divider hidden />
             <Question> 3. Why shouldn’t I just create a website with absolute positions for all its elements? </Question>
               <MyText>
-                Using absolute positioning for every element on your website would be fine if you plan on never making a change to it. The problem arises once you start wanting to make adjustments or add an element. Because absolutely positioned elements are not affected by their surroundings and are positioned based on their parent element, they are entirely removed from the flow of elements on this page. The new element being added would also need to be absolutely positioned according to its parent, which is going to be the html document itself. This makes flexibility and scalability effectively impossible.
+                Using absolute positioning for every element on your website would be fine if you plan on never making a change to it. The problem arises once you start wanting to make adjustments or add an element. Because absolutely positioned elements are not affected by their surroundings and are positioned based on their parent element, they are entirely removed from the flow of elements on this page. The new element being added would also need to be absolutely positioned according to its parent, which is going to be the html document itself. This makes flexibility and scalability effectively impossible as a website grows and changes over time.
               </MyText>
             <Question> 4. What is the difference between a font-size using px or em? Which one should be used? </Question>
               <MyText>
@@ -78,7 +78,7 @@ class AnswerSegment extends React.Component{
               </MyText>
             <Question> 6. Is there a way to manage CSS with variables, mixins, or functions either natively or in a tool? </Question>
               <MyText>
-                Preprocessors such as Sass and LESS have given us access to variables, mixins, functions, extends, and more for some time. More recently however, there are native CSS tools that will allows you to accomplish logic based styling. Originally the native CSS custom properties were only available through Chrome if I believe, but recently all modern browsers support them. Polyfills will allow us to make up for any legacy users.
+                Preprocessors such as Sass and LESS have given us access to variables, mixins, functions, extends, and more for some time. In recent years however, there are native CSS tools that allow us to accomplish logic based styling. Originally the native CSS custom properties were only available through Chrome if I believe, but recently all modern browsers support them. Polyfills will allow us to make up for any legacy users.
               </MyText>
             <Divider hidden />
         </MyContainer>
@@ -92,7 +92,7 @@ class AnswerSegment extends React.Component{
           <Header as="h2" textAlign="center" dividing> JavaScript </Header>
             <Question> 1. What’s the difference between the following 3 “car” approaches? </Question>
               <MyText>
-                With the first approach, we are simply creating a function. Nothing will be returned unless we provide some code in the function, and then actually call the function. Below I have declared the function Car to take in an argument of (make). Inside of the function, I will log the make.color. By then logging the function Car with the (honda) object passed into it, we get a return from the function of “blue”.
+                With the first approach, we are simply creating a function. Nothing will be returned unless we provide some code in the function, and then actually call the function. Below I have declared the function Car to take in an argument of (make). Inside of the function, I will log the make.color. By calling the function Car with the (honda) object passed into it, we get a return object from the function of “blue”.
               </MyText>
                 <Image 
                   src={Third} 
@@ -109,7 +109,7 @@ class AnswerSegment extends React.Component{
                 />
                 <br />
               <MyText>
-                In the final approach, you are setting the variable car equal to a new instance of the object returned by the Car() function. In this instance, Car() is operating as a constructor, and can take arguments of values that the constructor will be called with. This time I am not using the original honda object, but creating a new object in the arguments of the Car function, and allowing the function to manipulate that object.
+                In the final approach, you are setting the variable car equal to a new instance of the object returned by the Car() function. In this instance, Car() is operating as a constructor, and can take arguments of values that the constructor will be called with. This time I am not using the original honda object, but creating a new object in the arguments of the Car function, and allowing the function to manipulate that object and return accordingly.
               </MyText>
                 <Image 
                   src={Fifth} 
@@ -124,11 +124,11 @@ class AnswerSegment extends React.Component{
                 A disadvantage of this technology is that if someone has not enabled JavaScript in their browser, they will not be able to properly use the page. This means older browsers and especially phones that don’t support JavaScript can not use the page, unless there were non-JavaScript fallback methods implemented.
               </MyText>
               <MyText>
-                Furthermore, due to the asynchronous nature of AJAX, it can make debugging and testing difficult at times. If you send out a request for data, and then try to manipulate that data before it has been fully received you’ll often get errors. Users who have slower connections may have poor user experience due to situations where multiple requests are sent out (such as live search recommendations) and the page appears to be in a frozen state until that request is resolved. Thankfully with ES6 we have async/await and promises that allow us to manage these situations, however there are still ‘gotchas’ that exist at times. Overall AJAX is an invaluable tool for managing data driven websites and user experiences, but definitely requires an understanding to use properly.
+                Furthermore, due to the asynchronous nature of AJAX, it can make debugging and testing difficult at times. If you send out a request for data, and then try to manipulate that data before it has been fully received you’ll often get errors. Users who have slower connections may have poor user experience due to situations where multiple requests are sent out (such as live search recommendations) and the page appears to be in a frozen state until that request is resolved. Thankfully with ES6 we have async/await and promises that allow us to manage these situations, however there are still ‘gotchas’ that exist at times. Overall AJAX is an invaluable tool for managing data driven websites and user experience, but definitely requires a solid understanding to use properly.
               </MyText>
             <Question> 3. Fix the following condition check to not throw an error when myObj is undefined. </Question>
               <MyText>
-                If you attempt to compare the value of myObj first, it will fail because you can’t check if “undefined” is !== null. However by checking the typeof the object first , the condition check executes properly and returns false to the first part of the check and exits the function without throwing an error.
+                If you attempt to compare the value of myObj first, it will fail because you can’t check if “undefined” is !== null. However by checking the typeof the object first, the condition check executes properly and returns false to the first part of the check and exits the function without throwing an error.
               </MyText>
                 <Image 
                   src={Sixth} 
@@ -213,9 +213,8 @@ class AnswerSegment extends React.Component{
             </Question>
             <Question> What, if anything, is wrong with the code below? </Question>
               <MyText>
-              Besides being very difficult to read due to lack of formatting, I’m unsure of exactly what this person was trying to accomplish in the beginning. It appears they are trying to select the CSS of both a button class and the native html element of button. This should be accomplished in two separate blocks of code. The button does appear to be part of a form though, because it has a type of submit, so they are likely trying to make this button look special compared to the other buttons on the page. “Padding-front” is not a thing, nor is “bgcolor”  and “font-color.” “Text-transform: uppercase” and the final “transition” line need a semicolon at the end of them, and line-height should have a colon instead of a period after it. The font-family should likely have a fallback in case the selected font isn’t available.
+              Besides being very difficult to read due to lack of formatting, I’m unsure of exactly what this person was trying to accomplish in the beginning. It appears they are trying to select the CSS of both a button class and the native html element of button. This should be accomplished in two separate blocks of code. The button does appear to be part of a form though, because it has a type of submit, so they are likely trying to make this button look special compared to the other buttons on the page. “Padding-front” is not a thing, nor is “bgcolor” or “font-color.” The “Text-transform: uppercase” and the final “transition” lines need semicolons at the end of them, and line-height should have a colon instead of a period after it. The font-family should likely receive a fallback in case the selected font isn’t available.
               </MyText>
-
         </MyContainer>    
         )
 
@@ -227,7 +226,7 @@ class AnswerSegment extends React.Component{
           <Header as="h2" textAlign="center" dividing> jQuery </Header>
             <Question> 1. What is the correct jQuery code to set the background color of all p elements to red? </Question>
               <MyText>
-                d) $('p' ).css('background-color', 'red')
+                d) $('p').css('background-color', 'red')
               </MyText>
             <Question> 2. With jQuery, look at the following selector: $("div.intro"). What does it select? </Question>
               <MyText>
