@@ -8,6 +8,7 @@ import {
 } from 'semantic-ui-react';
 
 class NavBar extends React.Component {
+
   render() {
     return(
       <Spacer>
@@ -35,7 +36,7 @@ class NavBar extends React.Component {
             </MyItem>
           </Menu.Menu>
         </MyMenu>
-        </Spacer>
+      </Spacer>
     )
   }
 }

@@ -2,42 +2,72 @@ import React, { Component } from 'react';
 import { 
   Header,
   Grid, 
+  Divider,
 } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import Background from './images/background.png'
 import styled from 'styled-components';
 
 class Home extends Component {
   render() {
     return (
-        <MyContainer>
-          <Grid>
-            <Grid.Column>
-              <MyHeader> Engaged Nation Coding Challenge </MyHeader>
-              <SecondHeader as="h2"> Design | Javascript | CSS | jQuery </SecondHeader>
-              <MyText>
-                Thank you for the opportunity to complete this coding challenge. 
-                I hope that my answers and inspires your team of developers to consider me as your next employee.
-                They may notice that I have often chosen to use JavaScript ES6 syntax and have omitted semicolons at the end of my code.
-                This is a personal stylistic choice and was done on purpose, however I am more than happy to write code that meets Engaged Nation's linting rules.
-                I am in no way dogmatic in my approach to code, and am looking forward to working with a professioanl team.
-                <br />
-                As mentioned to your HR manager on the phone, I am not trying to hide the fact that I am a new developer. I still have learning to do.
-                However I am very motivated, eager to learn, and don't bring bad habits along with me.
-              </MyText>
+      <Grid stackable>
+        <Grid.Row>
+            <Grid.Column mobile={4} computer={16}>
+            <HeaderImage>
+              <MyWrapper>
+              <Grid.Row>
+                <MyHeader> Engaged Nation Coding Challenge </MyHeader>
+                <SecondHeader as="h1"> Design | Javascript | CSS | jQuery </SecondHeader>
+              </Grid.Row>
+                <Divider hidden/>
+                  <MyText>
+                    Thank you for the opportunity to complete this coding challenge. 
+                    I hope that my answers and effort inspires your team of developers to consider me as your next employee.
+                    They may notice that I chose to use JavaScript ES6 syntax in many places and omitted semicolons at the end of my code.
+                    This is a personal stylistic choice and was done on purpose, however I am more than happy to write code that meets Engaged Nation's linting rules.
+                    I am in no way dogmatic in my approach to code, and am looking forward to working with a professional team.
+                    <br />
+                    <br />
+                    As mentioned to your HR manager on the phone, I am not trying to hide the fact that I am a new developer. I still have learning to do. 
+                    For instance, I know this site would need significant work to improve it's responsiveness for smaller screens and native devices. 
+                    With my current abilities and the assignment's time constraint, this was difficult to pull off. However you'll never find me frustrated with being told to improve something, and I will strive to meet the new standards.
+                    However I am very motivated, eager to learn, and don't bring bad habits along with me.
+                  </MyText>
+                  <Grid.Row>
+                  <ButtonGroup>
+                    <Link to='/answers'>
+                      <MyButton>
+                      See My Answers
+                      </MyButton>
+                    </Link>
+                    <Link to='/resume'>
+                      <MyButton>
+                      See My Resume
+                      </MyButton>
+                    </Link>
+                  </ButtonGroup>
+                  </Grid.Row>
+                </MyWrapper>
+            </HeaderImage>
+            <Grid.Row>
+
+            </Grid.Row>
             </Grid.Column>
-          </Grid>
-        </MyContainer>
+        </Grid.Row>
+      </Grid>
     );
   }
 }
 
-const MyContainer = styled.div`
+const HeaderImage = styled.div`
   background-image: url(${Background});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 63.5vh;
+  height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `
@@ -49,13 +79,41 @@ const SecondHeader = styled(Header)`
 const MyText = styled.p`
   text-align: center;
   font-size: 1.2em;
+  line-height: 1.5em;
+`
+const MyWrapper = styled.div`
+  padding: 70px 0;
+  text-align: center;
+  max-width: 85%;
+  max-height: 90%;
+`
+
+const ButtonGroup = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+`
+const MyButton = styled.div`
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+  margin: 10px;
+  padding: 15px 40px;
+  color: white;
+  background-color: #007b8a!important;
+
+  &:hover {
+    background-color: #fff!important;
+    color: #007b8a!important;
+  }
 `
 
 const MyHeader = styled.div`
 text-align: center;
 font-size: 3.5em;
 font-weight: bold;
-color: #0680b0;
+color: #1590cc;
 `
 
 export default Home;
