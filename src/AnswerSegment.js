@@ -17,6 +17,7 @@ import Seventh from './images/seventh.png'
 import Eighth from './images/eighth.jpg'
 import Ninth from './images/ninth.jpg'
 import Tenth from './images/tenth.png'
+import Eleventh from './images/eleventh.png'
 
 class AnswerSegment extends React.Component{
   render() {
@@ -180,6 +181,40 @@ class AnswerSegment extends React.Component{
       return(
         <MyContainer>
           <Header textAlign="center" dividing> CSS </Header>
+            <Question> 1. Which Snippet of CSS is properly used to center a website horizontally? </Question>
+              <MyText>
+                d) margin: 0 auto;
+              </MyText>
+            <Question> 2. Which is the proper way to add a comment in a CSS file? </Question>
+              <MyText>
+                a) /* this is a comment */
+              </MyText>
+            <Question> 3. Which is the correct CSS syntax? </Question>
+              <MyText>
+                {"b) {color: black;}"}
+              </MyText>
+            <Question> 4. How do you insert padding so that it is 10 pixels at the top, 15 pixels at the bottom, 5 pixels at the right, and 10 pixels at the left? </Question>
+              <MyText>
+                d) padding: 10px 5px 15px 10px;
+              </MyText>
+            <Question> 5. How do you make a list not display bullet points? </Question>
+              <MyText>
+                d) list-style-type: none;
+              </MyText>
+          <Header textAlign="center" dividing> CSS Challenge Questions </Header>
+            <Question> 
+              Looking at the code snippet below, how would you change the font color to white for the first p element? 
+            <Image
+              src={Eleventh}
+              size="big"
+              centered
+            />
+            </Question>
+            <Question> What, if anything, is wrong with the code below? </Question>
+              <MyText>
+              Besides being very difficult to read due to lack of formatting, I’m unsure of exactly what this person was trying to accomplish in the beginning. It appears they are trying to select the CSS of both a button class and the native html element of button. This should be accomplished in two separate blocks of code. The button does appear to be part of a form though, because it has a type of submit, so they are likely trying to make this button look special compared to the other buttons on the page. “Padding-front” is not a thing, nor is “bgcolor”  and “font-color.” “Text-transform: uppercase” and the final “transition” line need a semicolon at the end of them, and line-height should have a colon instead of a period after it. The font-family should likely have a fallback in case the selected font isn’t available.
+              </MyText>
+
         </MyContainer>    
         )
 
