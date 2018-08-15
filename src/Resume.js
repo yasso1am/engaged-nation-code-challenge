@@ -2,8 +2,8 @@ import React from 'react'
 import {
   Image,
   Grid,
-  Button,
   Modal,
+  Header,
 } from 'semantic-ui-react'
 import styled from 'styled-components';
 
@@ -22,6 +22,11 @@ class Resume extends React.Component{
     return(
       <MainHeader>
         <MyGrid columns='two'>
+          <Grid.Column width={16}>
+            <Grid.Row>
+              <MyHeader> RESUMES </MyHeader>
+            </Grid.Row>
+          </Grid.Column>
           <Grid.Row>
             <Grid.Column width={6}>
               <Modal trigger={
@@ -62,7 +67,9 @@ const MainHeader = styled.div`
   height: 80vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
+  padding-top: 40px;
+  text-align: center;
   color: black;
 `
 const MyGrid = styled(Grid)`
@@ -72,10 +79,15 @@ const MyGrid = styled(Grid)`
 `
 
 const ResumeImage = styled(Image)`
-
-&:hover {
-  opacity: 0.4;
+  &:hover {
+    opacity: 0.4;
   }
+`
 
+const MyHeader = styled.div`
+  font-size: 34px;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 10px;
 `
 export default Resume
