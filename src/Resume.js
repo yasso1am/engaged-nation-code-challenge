@@ -3,7 +3,6 @@ import {
   Image,
   Grid,
   Modal,
-  Header,
 } from 'semantic-ui-react'
 import styled from 'styled-components';
 
