@@ -25,6 +25,7 @@ const Footer = () => {
 
 const MyText = styled.div`
   font-size: 1.2em;
+  overflow: auto;
 `
 const MyMenu = styled.div`
   height: 80px;
@@ -35,6 +36,7 @@ const MyMenu = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  overflow: auto;
 `
 
 const Social = styled.div`
