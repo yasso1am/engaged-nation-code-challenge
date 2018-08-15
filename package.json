@@ -3,14 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "semantic-ui-css": "^2.3.3",
+    "semantic-ui-react": "^0.82.2",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "main": "index.js",
+  "repository": "git@github.com:yasso1am/engaged-nation-code-challenge.git",
+  "author": "Andrew Yasso <andrew.yasso@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack-dev-server": "^3.1.5"
   }
 }
