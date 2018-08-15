@@ -17,9 +17,10 @@ class Home extends Component {
             <HeaderImage>
               <MyWrapper>
               <Grid.Row>
-                <MyHeader> Engaged Nation Coding Challenge </MyHeader>
-                <SecondHeader as="h1"> Design | Javascript | CSS | jQuery </SecondHeader>
+                <MyHeader> Engaged Nation <br /> Coding Challenge </MyHeader>
+                <SecondHeader as="h2"> Design | JavaScript | CSS | jQuery </SecondHeader>
               </Grid.Row>
+              <Grid.Row>
                 <Divider hidden/>
                   <MyText>
                     Thank you for the opportunity to complete this coding challenge. 
@@ -48,6 +49,7 @@ class Home extends Component {
                     </Link>
                   </ButtonGroup>
                   </Grid.Row>
+                  </Grid.Row>
                 </MyWrapper>
             </HeaderImage>
             <Grid.Row>
@@ -65,7 +67,7 @@ const HeaderImage = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: auto;
+  height: 82vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,10 +84,11 @@ const MyText = styled.p`
   line-height: 1.5em;
 `
 const MyWrapper = styled.div`
-  padding: 70px 0;
+  padding: 5px 80px;
   text-align: center;
   max-width: 85%;
-  max-height: 90%;
+  max-height: 100%;
+  overflow: auto;
 `
 
 const ButtonGroup = styled.div`
@@ -111,9 +114,11 @@ const MyButton = styled.div`
 
 const MyHeader = styled.div`
 text-align: center;
-font-size: 3.5em;
+font-size: 4em;
+line-height: 1em;
 font-weight: bold;
 color: #1590cc;
 `
+
 
 export default Home;

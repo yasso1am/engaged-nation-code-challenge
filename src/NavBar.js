@@ -25,8 +25,8 @@ class NavBar extends React.Component {
             />
           </MyLogo>
           <Menu.Menu position="right">
-            <MyItem as={Link} to="/">
-              <MyFirstText> HOME </MyFirstText>
+            <MyItem link href="https://www.engagednation.com/" target="_blank">
+              <MyFirstText> ENGAGED NATION WEBSITE </MyFirstText>
             </MyItem>
             <MyItem as={Link} to="/answers">
               <MyText> ANSWERS </MyText>
